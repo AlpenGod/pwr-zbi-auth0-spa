@@ -210,7 +210,7 @@ export const ExternalApiComponent = () => {
 
         <h1>Zewnetrzne API</h1>
         <p className="lead">
-          Zapinuj zewnetrzne API klikajac w ponizsze przyciski.
+          Zapinguj zewnetrzne API klikajac w ponizsze przyciski.
         </p>
 
         <div>
