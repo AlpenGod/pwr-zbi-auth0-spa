@@ -60,42 +60,16 @@ app.get("/api/external", checkJwt, (req, res) => {
     msg: "Jestes zalogowanym uzytkownikiem.",
   });
 });
-app.get("/api/external", (req, res) => {
-  res.send({
-    msg: "Jestes niezalogowanym uzytkownikiem.",
-  });
-});
 
 app.get("/api/zespol", checkJwt, checkZespol, (req, res) => {
   res.send({
     msg: "Wiola Jaworska, Dominik Blaszczyk"
   });
 });
-app.get("/api/zespol", (req, res) => {
-  res.send({
-    msg: "Jestes niezalogowanym uzytkownikiem.",
-  });
-});
-app.get("/api/zespol", checkJwt, (req, res) => {
-  res.send({
-    msg: "Nie masz uprawnien."
-  });
-});
-
 
 app.get("/api/zadania", checkJwt, checkZadania, (req, res) => {
   res.send({
     msg: "Projekt z zarządzania bezpieczeństwem informacji"
-  });
-});
-app.get("/api/zadania", (req, res) => {
-  res.send({
-    msg: "Jestes niezalogowanym uzytkownikiem.",
-  });
-});
-app.get("/api/zadania", checkJwt, (req, res) => {
-  res.send({
-    msg: "Nie masz uprawnien."
   });
 });
 
@@ -104,17 +78,6 @@ app.get("/api/admin", checkJwt, checkAdmin, (req, res) => {
     msg: "Hello root!"
   });
 });
-app.get("/api/admin", (req, res) => {
-  res.send({
-    msg: "Jestes niezalogowanym uzytkownikiem.",
-  });
-});
-app.get("/api/admin", checkJwt, (req, res) => {
-  res.send({
-    msg: "Nie masz uprawnien."
-  });
-});
-
 
 app.get("/api/public", (req, res) => {
   res.send({
